@@ -55,6 +55,7 @@ void prefixCreator(){
             prefix[i]++;
         }
     }
+    
 }
 
 int main(){
@@ -69,5 +70,7 @@ int main(){
     	int l,r;
         cin >> l >> r;
         cout << prefix[r] - prefix[l-1];
+
     }
+    return 0;
 }
