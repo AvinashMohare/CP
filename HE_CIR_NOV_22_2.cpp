@@ -3,9 +3,10 @@ using namespace std;
 
 const int limit = 1000001;
 int prefix[limit] = {0};
+int primes[limit];
+int sieve4[limit]={0};
 
-void prefixCreator(){
-    int primes[limit];
+void prefixCreator() {
     fill_n(primes, limit, 1);
 
     for(int j=2; j<limit; j++){
@@ -23,7 +24,6 @@ void prefixCreator(){
         }
     }
 
-    int sieve4[limit]={0};
     int shouldFindCube = 1;
     for(int i=0;i<finalprimes.size();i++){
         int value=finalprimes[i];
@@ -55,13 +55,10 @@ void prefixCreator(){
             prefix[i]++;
         }
     }
-    
 }
 
 int main(){
-    
     prefixCreator();
-    cout<<"Enter";
 	int t;
     cin >> t;
     
